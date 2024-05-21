@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres
+    ports: [5432:5432]
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_HOST=localhost
+    volumes:
+      - studio_data:/var/lib/postgres/data
+volumes:
+  studio_data:
+  
